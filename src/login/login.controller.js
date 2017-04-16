@@ -21,7 +21,7 @@ function LoginController($log,LoginService,$location) {
             userTmp = vm.users[i];
             if( (vm.user.userName == userTmp.userName) && (vm.user.password == userTmp.password)  && (userTmp.status == true))
             {
-                $location.path("/main");
+                $location.path("/categories");
             }
         }
 

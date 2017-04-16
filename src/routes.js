@@ -10,9 +10,8 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('app', {
       url: '/',
-      component: 'app',
-      redirectTo: 'list'
-
+      component: 'main',
+      redirectTo: 'login'
     })
 
     .state('login', {
@@ -28,10 +27,9 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       component: 'appCategories'
     })
 
-    .state('main', {
-      url: '/main',
-      templateUrl: 'main/main.html',
-      controller: 'MainController',
-      controllerAs: 'vmMain'
+    .state('edit', {
+      parent: 'app',
+      url: 'edit',
+      component: 'editCategorie'
     });
 }

@@ -3,37 +3,37 @@
     {
       "id": 1,
       "userName": "guido.guillen@gmail.com",
-      "password": "Password1123",
+      "password": "Password1",
       "status": true
     },
     {
       "id": 2,
       "userName": "guido.guillen.2@gmail.com",
-      "password": "Password1123",
+      "password": "Password1",
       "status": false
     },
     {
       "id": 3,
       "userName": "guido.guillen.3@gmail.com",
-      "password": "Password1123",
+      "password": "Password1",
       "status": false
     },
     {
       "id": 4,
       "userName": "guido.guillen.4@gmail.com",
-      "password": "Password1123",
+      "password": "Password1",
       "status": true
     },
     {
       "id": 5,
       "userName": "guido.guillen.5@gmail.com",
-      "password": "Password1123",
+      "password": "Password1",
       "status": true
     },
     {
       "id": 6,
-      "userName": "sadfsadf@asds.com",
-      "password": "google",
+      "userName": "guido.guillen.5@gmail.com",
+      "password": "Password1",
       "status": false
     },
     {
@@ -48,28 +48,46 @@
       "price": 1000
     },
     {
-      "id": 1,
-      "brand": "Hp",
-      "model": "Pavilion 1234A",
-      "price": 800
-    },
-    {
-      "id": 1,
-      "brand": "Lenovo",
-      "model": "T880",
-      "price": 750
-    },
-    {
-      "id": 1,
+      "id": 2,
       "brand": "Apple",
       "model": "iMAC 215",
       "price": 1900
     },
     {
-      "id": 1,
+      "id": 3,
+      "brand": "HP",
+      "model": "Zbook 15",
+      "price": 999
+    },
+    {
+      "id": 4,
       "brand": "Toshiba",
-      "model": "TSB 123t",
-      "price": 800
+      "model": "Bostro",
+      "price": 320
+    },
+    {
+      "id": 5,
+      "brand": "Lenovo",
+      "model": "X1 Carboon 2",
+      "price": 450
+    },
+    {
+      "id": 6,
+      "brand": "Intel",
+      "model": "Tablet",
+      "price": 900
+    },
+    {
+      "id": 7,
+      "brand": "Windows",
+      "model": "Surface",
+      "price": 759
+    },
+    {
+      "id": 8,
+      "brand": "Nvidea",
+      "model": "Tablet",
+      "price": 500
     }
   ]
 }

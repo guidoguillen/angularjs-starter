@@ -16,13 +16,20 @@
             <tr ng-repeat="elem in $ctrl.categories">
                 <td>{{elem.id}}</td>
                 <td>{{elem.brand}}</td>
-                <td>{{elem.model}}</td>
+                <td>{{elem.model}}</td> 
                 <td>{{elem.price}}</td>
-                <td><a ng-href="#/editCategorie/{{elem.id}}">Edit</a></td>
-                
+                <td>
+                    <a ng-href="/edit?id={{elem.id}}/brand/{{elem.brand}}/model/{{elem.model}}/price/{{elem.price}}">Edit</a>
+                    <span><a class="button">Delete</span>
+                </td>
             </tr>
         </tbody>
     </table>
     
 <div>
+
+
+
+
+
 

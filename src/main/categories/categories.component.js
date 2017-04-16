@@ -11,8 +11,6 @@ function AppCategoriesController(CategoriesService) {
         console.log('result', result);
         vm.categories = result;
         
-
-
     }).catch(function(error){
         console.log('Error found:', error);
         vm.error = 'Cannot find categories';
@@ -21,8 +19,6 @@ function AppCategoriesController(CategoriesService) {
     });
 
     console.log('test async');
-
-    
 }
 
 var component = {
