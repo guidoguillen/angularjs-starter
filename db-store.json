@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "guido.guillen@gmail.com",
+      "password": "Password1123",
+      "status": true
+    },
+    {
+      "id": 2,
+      "userName": "guido.guillen.2@gmail.com",
+      "password": "Password1123",
+      "status": false
+    },
+    {
+      "id": 3,
+      "userName": "guido.guillen.3@gmail.com",
+      "password": "Password1123",
+      "status": false
+    },
+    {
+      "id": 4,
+      "userName": "guido.guillen.4@gmail.com",
+      "password": "Password1123",
+      "status": true
+    },
+    {
+      "id": 5,
+      "userName": "guido.guillen.5@gmail.com",
+      "password": "Password1123",
+      "status": true
+    },
+    {
+      "id": 6,
+      "userName": "sadfsadf@asds.com",
+      "password": "google",
+      "status": false
+    },
+    {
+      "id": 7
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "brand": "Dell",
+      "model": "Latitude 6430u",
+      "price": 1000
+    },
+    {
+      "id": 1,
+      "brand": "Hp",
+      "model": "Pavilion 1234A",
+      "price": 800
+    },
+    {
+      "id": 1,
+      "brand": "Lenovo",
+      "model": "T880",
+      "price": 750
+    },
+    {
+      "id": 1,
+      "brand": "Apple",
+      "model": "iMAC 215",
+      "price": 1900
+    },
+    {
+      "id": 1,
+      "brand": "Toshiba",
+      "model": "TSB 123t",
+      "price": 800
+    }
+  ]
+}
