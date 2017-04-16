@@ -25,14 +25,29 @@ function EditCategorie(CategoriesService,$location) {
         CategoriesService.deleteCategorie(vm.categorie);
         promise.then(function(result){
             console.log('update Categorie', result);
+             $location.path("/categories");
         });
     };
     
-       vm.add = function() {
+    vm.add = function() {
         var promise = 
         CategoriesService.addCategorie(vm.categorie);
         promise.then(function(result){
             console.log('update Categorie', result);
+             $location.path("/categories");
+        });
+    };
+
+    vm.getCategorieById = function(id) {
+        var promise = CategoriesService.getCategorieById(id);
+        promise.then(function(result){
+        vm.categorie = result;
+            
+        }).catch(function(error){
+            console.log('Error found:', error);
+            vm.error = 'Cannot find categories';
+        }).finally(function(){
+            console.log('get categories has been finished');
         });
     };
 

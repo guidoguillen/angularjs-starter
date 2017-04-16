@@ -11,11 +11,26 @@ function LoginService($log, $q, $resource) {
         getCategories: getCategories,
         editCategorie:editCategorie,
         deleteCategorie:deleteCategorie,
-        addCategorie:addCategorie
+        addCategorie:addCategorie,
+        getCategorieById:getCategorieById
     };
   
     function getCategories() {
         $log.info('Running getCategories');
+        var future = $q.defer();
+        
+        resource.query().$promise.then(function(result){
+            future.resolve(result);
+        }).catch(function(error){
+            future.reject(error);
+        });
+
+        return future.promise;
+    }
+
+    function getCategorieById(id) {
+        $log.info('Running getCategorie by id');
+        var resource = $resource('http://localhost:9000/categories/'+id);
         var future = $q.defer();
         
         resource.query().$promise.then(function(result){
