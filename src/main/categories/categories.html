@@ -1,31 +1,7 @@
 
 <div class="container">
+    <div id="grid1"   ui-grid="{ data: $ctrl.categories   }" class="grid "></div>
 
-
-<table class="table table-bordered" id="example"  cellspacing="0" width="100%">
-        <thead class="thead-inverse">
-            <tr>
-                <th scope="row">Id</th>
-                <th>Brand</th>
-                <th>Model</th>
-                <th>Price</th>
-                <th>Options</th>
-            </tr>
-        </thead>
-        <tbody >
-            <tr ng-repeat="elem in $ctrl.categories">
-                <td>{{elem.id}}</td>
-                <td>{{elem.brand}}</td>
-                <td>{{elem.model}}</td> 
-                <td>{{elem.price}}</td>
-                <td>
-                    <a ng-href="/edit?id={{elem.id}}">Edit</a>
-                    <span><a class="button">Delete</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    
 <div>
 
 

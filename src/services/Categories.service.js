@@ -5,7 +5,7 @@ angular
     .factory('CategoriesService', LoginService);
 
 function LoginService($log, $q, $resource) {
-    var resource = $resource('http://localhost:9000/categories');
+    var resource = $resource('http://localhost:9000/categories/:id');
 
     return {
         getCategories: getCategories,
@@ -29,11 +29,10 @@ function LoginService($log, $q, $resource) {
     }
 
     function getCategorieById(id) {
-        $log.info('Running getCategorie by id');
-        var resource = $resource('http://localhost:9000/categories/'+id);
+        $log.info('Running getCategorieById by id');
         var future = $q.defer();
         
-        resource.query().$promise.then(function(result){
+        resource.get({id: id}).$promise.then(function(result){
             future.resolve(result);
         }).catch(function(error){
             future.reject(error);

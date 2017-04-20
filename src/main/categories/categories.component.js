@@ -18,6 +18,8 @@ function AppCategoriesController(CategoriesService) {
         console.log('get categories has been finished');
     });
 
+    
+
     console.log('test async');
 }
 

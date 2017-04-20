@@ -1,2 +1,2 @@
 angular
-  .module('app', ['ui.router','login','main','ngResource']);
+  .module('app', ['ui.router','login','main','ngResource','ui.grid']);
