@@ -53,12 +53,10 @@ function LoginService($log, $q, $resource) {
         return future.promise;
     }
 
-    function deleteCategorie(categorie) {
+    function deleteCategorie(id) {
         var future = $q.defer();
         
-        var resourceDelete = $resource('http://localhost:9000/categories/'+categorie.id);
-
-        resourceDelete.delete(categorie).$promise.then(function(result){
+        resource.delete({id: id}).$promise.then(function(result){
             future.resolve(result);
         }).catch(function(error){
             future.reject(error);
