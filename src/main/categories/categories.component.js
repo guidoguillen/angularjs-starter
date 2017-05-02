@@ -18,8 +18,7 @@ function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$locat
         { name: 'brand', width: 200 },
         { name: 'model', width: 200},
         { name: 'price', width: 200, cellClass: 'grid-align-right' },
-        { name: 'date', width: 200 },
-        
+        { name: 'date', width: 200 },      
         {
             field: 'id',
             displayName: 'Options',
@@ -33,7 +32,6 @@ function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$locat
     loadCategories();
   };
  
-
    function loadCategories(){
         var promise = CategoriesService.getCategories();
         promise.then(function(result){

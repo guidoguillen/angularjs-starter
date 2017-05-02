@@ -1,5 +1,5 @@
 
-function Categorie(CategoriesService,$stateParams,$location) {
+function Categorie(CategoriesService,$state,$stateParams,$location) {
     var vm = this;
     vm.title = 'Create';
     vm.categorie;
@@ -19,7 +19,7 @@ function Categorie(CategoriesService,$stateParams,$location) {
         var promise = CategoriesService.addCategorie(vm.categorie);
         promise.then(function(result){
              console.log('Create new categorie', result);
-             $state.go('/list');
+             $state.go('list');
         });
     };
 
@@ -41,17 +41,12 @@ function Categorie(CategoriesService,$stateParams,$location) {
         CategoriesService.editCategorie(categorie);
         promise.then(function(result){
             console.log('update Categorie', result);
-            goList();
+             $state.go('list');
         });
     };
 
-
     function cancel () {
-       goList();
-    }
-
-    function goList() {
-        $location.path("/list");
+        $state.go('list');
     }
 }
 

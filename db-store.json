@@ -43,10 +43,10 @@
   "categories": [
     {
       "id": 1,
-      "brand": "Dell",
+      "brand": "Dell xps",
       "model": "Latitude 6430u",
       "price": 1000,
-      "date": "2016-12-12"
+      "date": "2016-12-31"
     },
     {
       "id": 2,
@@ -64,9 +64,9 @@
     },
     {
       "id": 4,
-      "brand": "Toshiba",
+      "brand": "Toshiba GG",
       "model": "Bostro",
-      "price": 320,
+      "price": "999",
       "date": "2016-01-01"
     },
     {
@@ -89,6 +89,20 @@
       "model": "Surface",
       "price": 759,
       "date": "2016-01-01"
+    },
+    {
+      "brand": "Lluis",
+      "model": "PC",
+      "price": "100",
+      "date": "2016-01-02",
+      "id": 24
+    },
+    {
+      "brand": "Vostro",
+      "model": "DELL",
+      "price": "1590",
+      "date": "2014-02-15",
+      "id": 25
     }
   ]
 }
