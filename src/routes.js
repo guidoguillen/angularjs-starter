@@ -21,15 +21,21 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
       controllerAs: 'vmLogin'
     })
 
-    .state('categories', {
+    .state('list', {
       parent: 'app',
-      url: 'categories',
+      url: 'list',
       component: 'appCategories'
+    })
+
+    .state('add', {
+      parent: 'app',
+      url: 'add',
+      component: 'categorie'
     })
 
     .state('edit', {
       parent: 'app',
-      url: 'edit',
-      component: 'editCategorie'
+      url: 'edit/:id',
+      component: 'categorie'
     });
 }

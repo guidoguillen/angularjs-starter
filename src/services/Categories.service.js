@@ -5,7 +5,13 @@ angular
     .factory('CategoriesService', LoginService);
 
 function LoginService($log, $q, $resource) {
-    var resource = $resource('http://localhost:9000/categories/:id');
+    var resource = $resource('http://localhost:9000/categories/:id', {
+        id: '@id'}, 
+        {
+            update: {
+                method: 'PUT'
+            }
+        });
 
     return {
         getCategories: getCategories,
@@ -42,9 +48,8 @@ function LoginService($log, $q, $resource) {
     }
 
     function editCategorie(categorie) {
-        var future = $q.defer();
-        
-        resource.put(categorie).$promise.then(function(result){
+        var future = $q.defer();      
+        resource.update(categorie).$promise.then(function(result){
             future.resolve(result);
         }).catch(function(error){
             future.reject(error);
