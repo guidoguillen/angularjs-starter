@@ -1,8 +1,15 @@
 
 //USE of DEPENDENCY INJECTION framework(DI)
 
-function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$location,$window) {
+function AppCategoriesController(CategoriesService,$sessionStorage,$state,$http,$scope,$mdDialog,$location,$window) {
     console.log('Running AppCategoriesController controller');
+
+    $scope.texto = $sessionStorage.texto;
+    if($sessionStorage.isLogged== null)
+    {
+        $state.go('login');
+    }
+
     var vm = this;
 
     vm.gridOptions = { 

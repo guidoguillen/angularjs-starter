@@ -1,5 +1,5 @@
 
-function Categorie(CategoriesService,$state,$stateParams,$location) {
+function Categorie(CategoriesService,$sessionStorage,$state,$stateParams,$location) {
     var vm = this;
     vm.title = 'Create';
     vm.categorie;
@@ -9,6 +9,11 @@ function Categorie(CategoriesService,$state,$stateParams,$location) {
     vm.cancel = cancel;
 
     console.log('Running AppCategoriesController controller');
+
+    if($sessionStorage.isLogged== null)
+    {
+        $state.go('login');
+    }
 
     if($stateParams.id !=null){
         vm.title = 'Edit';

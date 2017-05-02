@@ -42,13 +42,6 @@
   ],
   "categories": [
     {
-      "id": 1,
-      "brand": "Dell xps",
-      "model": "Latitude 6430u",
-      "price": 1000,
-      "date": "2016-12-31"
-    },
-    {
       "id": 2,
       "brand": "Apple",
       "model": "iMAC 215",
@@ -85,24 +78,10 @@
     },
     {
       "id": 7,
-      "brand": "Windows 7",
+      "brand": "Windows 10",
       "model": "Surface",
       "price": 759,
       "date": "2016-01-01"
-    },
-    {
-      "brand": "Lluis",
-      "model": "PC",
-      "price": "100",
-      "date": "2016-01-02",
-      "id": 24
-    },
-    {
-      "brand": "Vostro",
-      "model": "DELL",
-      "price": "1590",
-      "date": "2014-02-15",
-      "id": 25
     }
   ]
 }
