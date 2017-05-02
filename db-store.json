@@ -78,10 +78,31 @@
     },
     {
       "id": 7,
-      "brand": "Windows 10",
-      "model": "Surface",
+      "brand": "Windows",
+      "model": "Surface 2",
       "price": 759,
       "date": "2016-01-01"
+    },
+    {
+      "brand": "Nexus",
+      "model": "Tab 9",
+      "price": "150",
+      "date": "2015-12-12",
+      "id": 8
+    },
+    {
+      "brand": "Apple",
+      "model": "Ipad Pro",
+      "price": "999",
+      "date": "2016-10-10",
+      "id": 9
+    },
+    {
+      "brand": "Nec",
+      "model": "Nec 345ct",
+      "price": "569",
+      "date": "2012-10-15",
+      "id": 10
     }
   ]
 }
