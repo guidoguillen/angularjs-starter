@@ -1,7 +1,7 @@
 
 //USE of DEPENDENCY INJECTION framework(DI)
 
-function AppCategoriesController(CategoriesService,$sessionStorage,$state,$http,$scope,$mdDialog,$location,$window) {
+function AppCategoriesController(CategoriesService,$sessionStorage,$state,$http,$scope,$window) {
     console.log('Running AppCategoriesController controller');
 
     $scope.texto = $sessionStorage.texto;
@@ -81,9 +81,9 @@ function AppCategoriesController(CategoriesService,$sessionStorage,$state,$http,
     }
 
      $scope.ShowConfirm = function (id) {
-            if ($window.confirm("Are you sure delete categorie ? ")) {
-                deleteCategorie(id);
-            } 
+        if ($window.confirm("Are you sure delete categorie ? ")) {
+            deleteCategorie(id);
+        } 
     }
 }
 
