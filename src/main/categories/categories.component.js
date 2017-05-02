@@ -1,7 +1,7 @@
 
 //USE of DEPENDENCY INJECTION framework(DI)
 
-function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$location) {
+function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$location,$window) {
     console.log('Running AppCategoriesController controller');
     var vm = this;
 
@@ -23,7 +23,7 @@ function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$locat
             field: 'id',
             displayName: 'Options',
             enableCellEdit: false,
-            cellTemplate: '<div class="container ngCellText"><a ng-click="grid.appScope.deleteCategorie(COL_FIELD)" class="glyphicon glyphicon-remove red"></a>&nbsp;&nbsp;&nbsp;<a ui-sref="edit({id: COL_FIELD})" class="glyphicon glyphicon-pencil red"></a></div>'   
+            cellTemplate: '<div class="container ngCellText"><a ng-click="grid.appScope.ShowConfirm(COL_FIELD)" class="glyphicon glyphicon-remove red"></a>&nbsp;&nbsp;&nbsp;<a ui-sref="edit({id: COL_FIELD})" class="glyphicon glyphicon-pencil red"></a></div>'   
         }
     ];
 
@@ -46,7 +46,7 @@ function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$locat
         console.log('test async');  
     }
 
-    $scope.deleteCategorie = function(id) {
+    function deleteCategorie(id) {
             var promise = CategoriesService.deleteCategorie(id);
             promise.then(function(result){
                 console.log('result', result);
@@ -60,7 +60,7 @@ function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$locat
             console.log('test async');  
     }
 
-     function getCategorieById (id){
+    function getCategorieById (id){
         var promise = CategoriesService.getCategorieById(id);
         promise.then(function(result){
         return vm.categorie = result;
@@ -71,6 +71,12 @@ function AppCategoriesController(CategoriesService,$http,$scope,$mdDialog,$locat
         }).finally(function(){
             console.log('get categories has been finished');
         });
+    }
+
+     $scope.ShowConfirm = function (id) {
+            if ($window.confirm("Are you sure delete categorie ? ")) {
+                deleteCategorie(id);
+            } 
     }
 }
 
